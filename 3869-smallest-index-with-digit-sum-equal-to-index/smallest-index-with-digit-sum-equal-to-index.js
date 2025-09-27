@@ -14,6 +14,7 @@ var smallestIndex = function (nums) {
 
     for (let i = 0; i < nums.length; i++) {
         const value = (digitSum(nums[i]) === i) ? i : null
+        
         if (value !== null)
             return value;
     }
