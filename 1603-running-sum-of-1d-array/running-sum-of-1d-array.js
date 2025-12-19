@@ -4,12 +4,12 @@
  */
 var runningSum = function (nums) {
     let newArray = [];
-    nums.forEach((value, i) => {
+    for (let num of nums) {
         if (newArray.length) {
-            newArray.push(value + newArray[i - 1])
+            newArray.push(newArray[newArray.length - 1] + num);
         } else {
-            newArray.push(value);
+            newArray.push(num)
         }
-    });
+    }
     return newArray;
 };
