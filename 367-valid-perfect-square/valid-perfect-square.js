@@ -10,5 +10,6 @@ var isPerfectSquare = function (num) {
             return true;
         }
     }
+    
     return false;
 };
