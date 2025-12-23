@@ -6,12 +6,15 @@
 var backspaceCompare = function (s, t) {
     const process = (str) => {
         let stock = [];
+        
         for (let ch of str) {
+            
             if (ch === '#') {
                 stock.pop();
             } else {
                 stock.push(ch)
             }
+
         }
         return stock.join('');
     }
