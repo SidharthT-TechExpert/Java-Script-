@@ -3,12 +3,12 @@
  * @return {boolean}
  */
 var isPerfectSquare = function (num) {
-    let odd = 1;
+    if (num < 2) return true;
 
-    while (num > 0) {
-        num -= odd;
-        odd += 2;
+    for (let i = 1; i <= num / 2; i++) {
+        if (i * i == num) {
+            return true;
+        }
     }
-
-    return num === 0;
+    return false;
 };
