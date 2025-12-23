@@ -4,11 +4,13 @@
  * @return {boolean}
  */
 var backspaceCompare = function (s, t) {
+    if (s === t) return true;
+    
     const process = (str) => {
         let stock = [];
-        
+
         for (let ch of str) {
-            
+
             if (ch === '#') {
                 stock.pop();
             } else {
