@@ -4,15 +4,17 @@
  */
 var majorityElement = function (nums) {
     let freq = {};
+
     nums.forEach(num => {
         freq[num] = (freq[num] || 0) + 1
-    });
+    })
 
-    const majority = nums.length/2;
+    let majority = nums.length / 2;
 
-    for(let keys in freq){
-        if(freq[keys]>majority){
-           return Number(keys);
+    for (let num in freq) {
+        if (freq[num] > majority) {
+            return Number(num)
         }
     }
+
 };
