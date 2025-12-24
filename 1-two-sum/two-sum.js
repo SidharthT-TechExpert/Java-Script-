@@ -4,11 +4,15 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-    for (let j = 0; j < nums.length; j++) {
-        for (let i = j + 1; i < nums.length; i++) {
-            if (nums[j] + nums[i] === target) {
-                return [j, i];
+    let out = [];
+
+    nums.forEach((num, i) => {
+        nums.forEach((num2, j) => {
+            if (i != j && num + num2 === target) {
+                out.push(i, j);
             }
-        }
-    }
+        })
+    })
+    
+    return [out[0], out[1]];
 };
