@@ -14,12 +14,12 @@ var addBinary = function (a, b) {
         let sum = carry;
 
         if (i >= 0) {
-            sum += a[i] - '0';
+            sum += Number(a[i]);
             i--;
         }
 
         if (j >= 0) {
-            sum += b[j] - '0';
+            sum += Number(b[j]);
             j--;
         }
 
