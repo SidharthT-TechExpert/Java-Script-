@@ -7,8 +7,9 @@ var largestAltitude = function (gain) {
     let maxAltitude = 0;
 
     for (let i = 0; i < gain.length; i++) {
-        sum += gain[i];          // Add only current gain
-        maxAltitude = Math.max(maxAltitude, sum); // Track maximum
+        sum += gain[i];          
+        maxAltitude = Math.max(maxAltitude, sum); 
     }
+
     return maxAltitude;
 };
