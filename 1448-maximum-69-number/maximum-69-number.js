@@ -15,6 +15,5 @@ var maximum69Number = function (num) {
     })
 
     const out = maxValue.length > 0 ? Math.max(...maxValue) : num;
-    console.log(out)
     return out
 };
