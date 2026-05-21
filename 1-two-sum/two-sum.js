@@ -1,16 +1,15 @@
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
+var twoSum = function(nums, target) {
 
-var twoSum = function (nums, target) {
-    const map = {};
+    let hash = {};
+
     for (let i = 0; i < nums.length; i++) {
-        const complete = target - nums[i];
-        if (map[complete] !== undefined) {
-            return [map[complete], i]
+
+        let com = target - nums[i];
+
+        if (hash[com] !== undefined) {
+            return [hash[com], i];
         }
-        map[nums[i]] = i;
+
+        hash[nums[i]] = i;
     }
 };
