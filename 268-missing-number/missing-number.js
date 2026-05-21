@@ -2,19 +2,13 @@
  * @param {number[]} nums
  * @return {number}
  */
-var missingNumber = function(nums , n=nums.length) {
-    //  while(n){
-    //     if(!nums.includes(n)){
-    //      return n;
-    //     }
-    //     n--;
-    //  }
+var missingNumber = function (nums) {
 
-    if(!nums.includes(n)){
-        return n;
-    }
+    let n = nums.length;
 
+    let expected = (n * (n + 1)) / 2;
 
+    let actual = nums.reduce((sum, num) => sum + num, 0);
 
-     return n === 1 ? 0 : missingNumber(nums,n-1)
+    return expected - actual;
 };
