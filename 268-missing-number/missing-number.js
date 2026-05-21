@@ -2,15 +2,19 @@
  * @param {number[]} nums
  * @return {number}
  */
-var missingNumber = function(nums) {
-    let n = nums.length;
-         
-     while(n){
-        if(!nums.includes(n)){
-         return n;
-        }
-        n--;
-     }
+var missingNumber = function(nums , n=nums.length) {
+    //  while(n){
+    //     if(!nums.includes(n)){
+    //      return n;
+    //     }
+    //     n--;
+    //  }
 
-     return 0;
+    if(!nums.includes(n)){
+        return n;
+    }
+
+
+
+     return n === 1 ? 0 : missingNumber(nums,n-1)
 };
