@@ -3,9 +3,12 @@
  * @param {string} t
  * @return {boolean}
  */
-var isAnagram = function (s, t) {
-    newS = s.split('').sort().join('');
-    newT = t.split('').sort().join('');
-
-    return newS === newT;
+var isAnagram = function(s, t) {
+    if(s.length !== t.length){
+        return false;
+    }
+    sortS = s.split('').sort().join('');
+    sortT = t.split('').sort().join('');
+    console.log(sortS,sortT)
+    return sortS === sortT;
 };
