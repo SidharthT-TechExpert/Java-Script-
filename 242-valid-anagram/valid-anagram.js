@@ -9,6 +9,6 @@ var isAnagram = function(s, t) {
     }
     sortS = s.split('').sort().join('');
     sortT = t.split('').sort().join('');
-    console.log(sortS,sortT)
+    
     return sortS === sortT;
 };
